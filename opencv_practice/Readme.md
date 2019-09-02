@@ -11,8 +11,8 @@ cv2.putText(img,text='',org=(),.....): Put the text on Image
 Blurring ＆ smoothing : 使用kernel將圖片進行處理，可使圖片變模糊已達到降噪的效果(noise)
 
 step:	*build kernel
-	     *use kernel to processing image
-	     *get new image
+	     use kernel to processing image
+	     get new image
 
 code1:	kernel = np.ones(shape=(5,5),dtype=np.float32)/25
 	dst = cv2.filter2D(img,-1,kernel)
