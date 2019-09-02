@@ -26,7 +26,7 @@ cv2.GaussianBlur(img,ksize=(),10)
 cv2.medianBlur(img,5)  
 
 
-# Morphological Operators （形態學影像處理）
+## Morphological Operators （形態學影像處理）
 
 Morphological Operators: A set of Kernels that can achieve a variety of effects,like reducing noise
 
@@ -43,7 +43,7 @@ Morphological "closing" : Reducing the noise on the "foreground"
 Morphological "Gradient" : 調整顏色的方向  
 
 
-# Normal ways to emphasize X & Y axis for doing "Edge Detection"
+## Normal ways to emphasize X & Y axis for doing "Edge Detection"
 
 1. Sobel X & Y
 2. Laplacian
@@ -55,7 +55,7 @@ Morphological "Gradient" : 調整顏色的方向
 
 
 
-# Histogram(顯示圖形值的分佈---直方圖)
+## Histogram(顯示圖形值的分佈---直方圖)
 
 Histogram Equalization:  
 Method of contrast adjustment based on the image histogram (Reduce the color depth)  
