@@ -57,10 +57,9 @@ Morphological "Gradient" : 調整顏色的方向
 
 # Histogram(顯示圖形值的分佈)
 
-Histogram Equalization: Method of contrast adjustment based on the image histogram
-			(Reduce the color depth)
-			(將圖形中的值最小與最大擴展成0&255,使histogram看起來更加線性,增加對比程度)
-			(low constrast---->high constrast)
+Histogram Equalization: 
+Method of contrast adjustment based on the image histogram (Reduce the color depth)  
+(將圖形中的值最小與最大擴展成0&255,使histogram看起來更加線性,增加對比程度) (low constrast---->high constrast)  
 
 1. Build the mask
 2. Use mask to perform parts histogram equlization
