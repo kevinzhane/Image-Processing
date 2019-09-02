@@ -38,9 +38,9 @@ Erosion (侵蝕) : The value of the output pixel is the minimum value of all the
 
 Dilation (擴張): The value of the output pixel is the maximum value of all the pixels in the input pixel's neighborhood. In a binary image, if any of the pixels is set to the value 1, the output pixel is set to 1.
 
-Morphological "opening" : Reducing the noise on the "background"
-Morphological "closing" : Reducing the noise on the "foreground"
-Morphological "Gradinet" : 調整顏色的方向
+Morphological "opening" : Reducing the noise on the "background"  
+Morphological "closing" : Reducing the noise on the "foreground"  
+Morphological "Gradinet" : 調整顏色的方向  
 
 
 # Normal ways to emphasize X & Y axis for doing "Edge Detection"
