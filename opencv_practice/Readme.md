@@ -1,12 +1,12 @@
-# Blurring & Smoothing
+# Image Processing
+
+## Blurring & Smoothing
 
 gamma : 調整圖片的亮度（越高越暗）
 
 np.power(img,gamma=?)
  
 cv2.putText(img,text='',org=(),.....): Put the text on Image
-
-
 
 Blurring ＆ smoothing : 使用kernel將圖片進行處理，可使圖片變模糊已達到降噪的效果(noise)
 
@@ -57,7 +57,7 @@ Morphological "Gradient" : 調整顏色的方向
 
 # Histogram(顯示圖形值的分佈---直方圖)
 
-Histogram Equalization: 
+Histogram Equalization:  
 Method of contrast adjustment based on the image histogram (Reduce the color depth)  
 (將圖形中的值最小與最大擴展成0&255,使histogram看起來更加線性,增加對比程度) (low constrast---->high constrast)  
 
