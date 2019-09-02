@@ -52,6 +52,25 @@ Morphological "Gradinet" : 調整顏色的方向
 
 
 
+# Histogram(顯示圖形值的分佈)
+
+Histogram Equalization: Method of contrast adjustment based on the image histogram
+			(Reduce the color depth)
+			(將圖形中的值最小與最大擴展成0&255,使histogram看起來更加線性,增加對比程度)
+			(low constrast---->high constrast)
+
+1. Build the mask
+2. Use mask to perform parts histogram equlization
+3. Use "cv2.calHist" to show histogram 
+
+Full color Histogram Equlization
+(不能分別對單一頻道執行均衡化，因此須轉成其他色域進行均衡化)
+1. Color channel BGR ---> HSV
+2. Use "cv2.equlizeHist" to insteads orgin value
+3. Color channel HSV ---> RGB
+
+More details:
+Histogram equalization is a non-linear process. Channel splitting and equalizing each channel separately is not the proper way for equalization of contrast. Equalization involves Intensity values of the image not the color components. So for a simple RGB color image, HE should not be applied individually on each channel. Rather, it should be applied such that intensity values are equalized without disturbing the color balance of the image. So, the first step is to convert the color space of the image from RGB into one of the color spaces which separate intensity values from color components. 
 
 
 

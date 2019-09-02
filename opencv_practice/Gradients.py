@@ -25,9 +25,9 @@ def display_2img(img1,img2,str1,str2):
 	plt.title(str2)
 	plt.show()
 
-######################
-### Edge Detection ##
-####################
+##########################
+### Emphasize Edge Way ##
+########################
 
 img = cv2.imread('../DATA/sudoku.jpg',0)
 #display_img(img)
