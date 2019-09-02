@@ -40,7 +40,7 @@ Dilation (擴張): The value of the output pixel is the maximum value of all the
 
 Morphological "opening" : Reducing the noise on the "background"  
 Morphological "closing" : Reducing the noise on the "foreground"  
-Morphological "Gradinet" : 調整顏色的方向  
+Morphological "Gradient" : 調整顏色的方向  
 
 
 # Normal ways to emphasize X & Y axis for doing "Edge Detection"
