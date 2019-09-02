@@ -55,7 +55,7 @@ Morphological "Gradient" : 調整顏色的方向
 
 
 
-# Histogram(顯示圖形值的分佈)
+# Histogram(顯示圖形值的分佈---直方圖)
 
 Histogram Equalization: 
 Method of contrast adjustment based on the image histogram (Reduce the color depth)  
