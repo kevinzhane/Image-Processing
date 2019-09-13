@@ -26,6 +26,15 @@ cv2.GaussianBlur(img,ksize=(),10)
 cv2.medianBlur(img,5)  
 
 
+## Thresholding (設定閥值) 
+
+Thresholding can be used to create "binary" images (grayscale ---> binary)
+類似分類器的概念，透過設定一個閥值，將 > value 設定成 "1" ,反之則設定成 "0"
+
+Multiband thresholding (for 'RGB' image): Color images can also be thresholded,but it need to change color space to 'HSL' or 'HSV' model for convenience.
+					  (There is some other model can be thresholded,check wiki 'https://en.wikipedia.org/wiki/Thresholding_(image_processing)')
+
+
 ## Morphological Operators （形態學影像處理）
 
 Morphological Operators: A set of Kernels that can achieve a variety of effects,like reducing noise
