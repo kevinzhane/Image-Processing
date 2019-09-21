@@ -10,7 +10,7 @@ height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 # WINDOWS -- *'DIVX'
 # MAC or LINUX -- *'XVID'
 # Writer is command to saving the video
-writer = cv2.VideoWriter('myvideo.mp4',cv2.VideoWriter_fourcc(*'XVID'),25,(width,height))
+writer = cv2.VideoWriter('myvideo.mp4',cv2.VideoWriter_fourcc(*'XVID'),20,(width,height))
 
 # Build the frame to show video
 while True:

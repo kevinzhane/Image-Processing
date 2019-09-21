@@ -85,5 +85,40 @@ Histogram equalization is a non-linear process. Channel splitting and equalizing
 
 
 
+# Object Detection 
+
+## Template Matching
+
+It simply scans a larger images for a provided template by sliding the template target image across the larger image
+
+Use 'cv2.matchTemplate' & 'cv2.minMaxLoc' to build the Headmap and draw the rectangle for face dectection
+
+six methods:
+1. 'cv2.TM_CCOEFF' 
+2. 'cv2.TM_CCOEFF_NORMED' 
+3. 'cv2.TM_CCORR' 
+4. 'cv2.TM_CCORR_NORMED'
+5. 'cv2.TM_SQDIFF' 
+6. 'cv2.TM_SQDIFF_NORMED
+
+## Corner Detection
+
+### Harris Corner Detection
+
+Swifting the 'window' to check the image if it have large change
+
+Flat regions: Have no change in all directions
+Edges: Won't have a major change long the direction of the edge
+
+Use 'cv2.cornerHarris' to find the corner point & use dilate to expand the point
+
+### Shi-Tomasi Detection
+
+
+
+
+
+
+
 
 
