@@ -114,7 +114,24 @@ Use 'cv2.cornerHarris' to find the corner point & use dilate to expand the point
 
 ### Shi-Tomasi Detection
 
+1. Use 'cv2.goodFeaturesToTrack' to find the corner on the image
+2. Change the 'float' to 'int'
+3. Draw the circle point (corner) on the image 
 
+
+## Edge Detection
+
+### Canny Edge Detection Process
+
+1. Apply Gaussian filter to smooth the image in order to remove the noise ---> Find the intensity gradients of the image
+2. Apply non-maximum suppression(NMS,非極大值抑制) to get rid of spurious response(偽訊號響應) to edge detection
+(類似過濾掉不需要的資訊，只取我們需要的部份) src:https:'//www.cnblogs.com/makefile/p/nms.html'
+3. Apply double threshold to determine potential edges
+4. Track edge by hysteresis: Finalize the edtection of edges by suppressing(抑制）all the other edges that are weak and not connected to strong edges
+
+Need to adjust image to decide the 'low' & 'high' value on threshold
+
+Use 'cv2.canny' to find edges,performing blurred first can reduce some noise and find strong edges
 
 
 
