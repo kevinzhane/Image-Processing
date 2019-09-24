@@ -134,8 +134,24 @@ Need to adjust image to decide the 'low' & 'high' value on threshold
 Use 'cv2.canny' to find edges,performing blurred first can reduce some noise and find strong edges
 
 
+## Grid Detection (格子)
+
+Two convenient function
+1. 'cv2.findChessboardCorners'
+2. 'cv2.findCirclesGrid'
 
 
+## Contours Detection (輪廓)
+
+Contours: A curve joining all the continuous points,contours are a useful tool for shape analysis & object detection and recognition
+
+1. Use 'cv2.findContours' to get the hierarchy(層次) & contours & image
+2. Build the same shape of the original image
+3. Draw the contours on the image
+
+Hierarchy: It will group different contours from values
+1.External contours: '-', like:-1
+2.Internal contours: '+', like:0,4
 
 
 
