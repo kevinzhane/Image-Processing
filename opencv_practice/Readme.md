@@ -153,5 +153,15 @@ Hierarchy: It will group different contours from values
 1.External contours: '-', like:-1
 2.Internal contours: '+', like:0,4
 
+## Feature Matching
+
+Feature matching defining key features from an input image(Using ideas from corner,edge,and contours detection). Then using a distance calculation,finds all the matches in a secondary image.
+
+3 methods:
+1. Brute-Force Matching with ORB descriptors
+2. Brute-Force Matching with SIFT descriptors and Ratio Test
+3. FLANN based Matcher (fast than the brute force methods,but it just find the approximate nearest neighbors,it mean is a good matching but not best)
+
+
 
 
