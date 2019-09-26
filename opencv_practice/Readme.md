@@ -162,6 +162,32 @@ Feature matching defining key features from an input image(Using ideas from corn
 2. Brute-Force Matching with SIFT descriptors and Ratio Test
 3. FLANN based Matcher (fast than the brute force methods,but it just find the approximate nearest neighbors,it mean is a good matching but not best)
 
+Model:
+1. Build the create object
+2. Find the key point and descriptor
+3. Create the matching object and sort the matching value
+4. Draw the match
+
+
+## Watershed Algorithm (分水嶺)
+
+(可以利用圖片的顏色對物體進行分類)
+Any grayscale image can be viewed as a topographic surface where 'high intensity' denotees peaks and hills while 'low intensity' denotes valleys.
+
+The algorithm can then fill every isolated vallyes(local minima) with different colored water(label).
+
+Use watershed to distinct the segments
+Step:
+1. Blur the image(Try strong blur to for the lagre details image)
+2. Grayscale and Threshold (2 types of threshold: Binary_INV or OTSU)
+3. We face the problem (the threshold image look like all connect to each other)
+4-1. 'Remove the noise' or 'erosion'--- normal methods
+4-2. Find the sure_background use 'dilation' & sure_foreground use 'Distance Transform' (利用膨脹找到sure_bk)
+5. Use watershed to solve 'unknown region'
+6. Use connected components to grab some markers
+7. Now have 'sure_background' & 'unknow region' and 'six markers points'
+8. Apply watershed algorithm ---> Get six distinct point on segments
+9. Find the contour and draw it 
 
 
 
