@@ -1,6 +1,6 @@
-# Image Processing
+# Image Processing Basic
 
-## Blurring & Smoothing
+## 1.1 Blurring & Smoothing
 
 gamma : 調整圖片的亮度（越高越暗）
 
@@ -26,7 +26,7 @@ cv2.GaussianBlur(img,ksize=(),10)
 cv2.medianBlur(img,5)  
 
 
-## Thresholding (設定閥值) 
+## 1.2 Thresholding (設定閥值) 
 
 Thresholding can be used to create "binary" images (grayscale ---> binary)
 類似分類器的概念，透過設定一個閥值，將 > value 設定成 "1" ,反之則設定成 "0"
@@ -35,7 +35,7 @@ Multiband thresholding (for 'RGB' image): Color images can also be thresholded,b
 					  (There is some other model can be thresholded,check wiki 'https://en.wikipedia.org/wiki/Thresholding_(image_processing)')
 
 
-## Morphological Operators （形態學影像處理）
+## 1.3 Morphological Operators （形態學影像處理）
 
 Morphological Operators: A set of Kernels that can achieve a variety of effects,like reducing noise
 
@@ -64,7 +64,7 @@ Morphological "Gradient" : 調整顏色的方向
 
 
 
-## Histogram(顯示圖形值的分佈---直方圖)
+## 1.4 Histogram(顯示圖形值的分佈---直方圖)
 
 Histogram Equalization:  
 Method of contrast adjustment based on the image histogram (Reduce the color depth)  
@@ -87,7 +87,7 @@ Histogram equalization is a non-linear process. Channel splitting and equalizing
 
 # Object Detection 
 
-## Template Matching
+## 1 Template Matching
 
 It simply scans a larger images for a provided template by sliding the template target image across the larger image
 
@@ -101,7 +101,7 @@ six methods:
 5. 'cv2.TM_SQDIFF' 
 6. 'cv2.TM_SQDIFF_NORMED
 
-## Corner Detection
+## 2 Corner Detection
 
 ### Harris Corner Detection
 
@@ -119,7 +119,7 @@ Use 'cv2.cornerHarris' to find the corner point & use dilate to expand the point
 3. Draw the circle point (corner) on the image 
 
 
-## Edge Detection
+## 3 Edge Detection
 
 ### Canny Edge Detection Process
 
@@ -134,14 +134,14 @@ Need to adjust image to decide the 'low' & 'high' value on threshold
 Use 'cv2.canny' to find edges,performing blurred first can reduce some noise and find strong edges
 
 
-## Grid Detection (格子)
+## 4 Grid Detection (格子)
 
 Two convenient function
 1. 'cv2.findChessboardCorners'
 2. 'cv2.findCirclesGrid'
 
 
-## Contours Detection (輪廓)
+## 5 Contours Detection (輪廓)
 
 Contours: A curve joining all the continuous points,contours are a useful tool for shape analysis & object detection and recognition
 
@@ -153,7 +153,7 @@ Hierarchy: It will group different contours from values
 1.External contours: '-', like:-1
 2.Internal contours: '+', like:0,4
 
-## Feature Matching
+## 6 Feature Matching
 
 Feature matching defining key features from an input image(Using ideas from corner,edge,and contours detection). Then using a distance calculation,finds all the matches in a secondary image.
 
@@ -169,7 +169,7 @@ Model:
 4. Draw the match
 
 
-## Watershed Algorithm (分水嶺)
+## 7 Watershed Algorithm (分水嶺)
 
 (可以利用圖片的顏色對物體進行分類)
 Any grayscale image can be viewed as a topographic surface where 'high intensity' denotees peaks and hills while 'low intensity' denotes valleys.
@@ -189,5 +189,25 @@ Step:
 8. Apply watershed algorithm ---> Get six distinct point on segments
 9. Find the contour and draw it 
 
+## 8 Face Detection (Haar-like feature)
 
+1.Import the the trained .xml file (cv2.CascadeClassifier)
+2.Scan the image to find feature rectangle axis(.detectMultiScale)
+3.You can adjust the parameter of above function (scaleFactor & minNeighbor)
+4.Draw the rectange on the origin image
+5.Practice for blur this area(car plate)
 
+# Object Tracking
+
+Two assumption:
+1.Pixel intensities of an object don't change between two consecutive frames
+2.Neighbouring pixel have similar motion
+
+## Optical flow (光流法)
+
+利用2張不同的連續影像，去實現判斷影像的移動軌跡，在找特徵點時需要注意
+
+1. Lucas-Kanade: 通過金字塔Lucas-Kanade 光流方法計算某些點集的光流（稀疏光流）
+2. Gunnar Farneback: 用Gunnar Farneback 的算法計算稠密光流（即圖像上所有像素點的光流都計算出來）
+3. Horn-Schunck: 通過塊匹配的方法來計算光流。
+4. SimpleFlow: http://graphics.berkeley.edu/papers/Tao-SAN-2012-05/
