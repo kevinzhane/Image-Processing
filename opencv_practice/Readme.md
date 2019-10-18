@@ -211,3 +211,17 @@ Two assumption:
 2. Gunnar Farneback: 用Gunnar Farneback 的算法計算稠密光流（即圖像上所有像素點的光流都計算出來）
 3. Horn-Schunck: 通過塊匹配的方法來計算光流。
 4. SimpleFlow: http://graphics.berkeley.edu/papers/Tao-SAN-2012-05/
+
+
+
+## MeanShift and CamShift Tracking Theory 
+
+MeanShift: First it will start at initial position,then through the iteration it will more close the clusters(like knn). After subsequent iterations,the cluster means have stopped moving.(You can't contorl the number of cluster,it will calculate by itself)
+ 
+In image: Meanshift can be given a target to track,calculate the color histogram of the target area,and then keep sliding the tracking window to the closet match(the cluster center).......If just use MeanShift on video,it can't track the target when the object is moving.
+
+In Video: We use 'CAMshift' to update the size of the window.
+
+
+
+src:https://stackoverflow.com/questions/4831813/image-segmentation-using-mean-shift-explained
