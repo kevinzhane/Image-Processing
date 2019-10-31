@@ -227,6 +227,31 @@ In Video: We use 'CAMshift' to update the size of the window.
 src:https://stackoverflow.com/questions/4831813/image-segmentation-using-mean-shift-explained
 
 
+# DeepLearning for computer vision
+
+## Machine Learning Basic
+
+supervised learning(監督式學習): Train the the model use labeled data,so the trained can compare the output from the label to find error.  
+
+Machine Learning Process
+					
+Data acquisition---->Data Cleaning--->Model Training&Building--->Model Testing--->Model Deployment  
+				  --------->-------Test Data--------^   
+
+
+Data Cleaning(use Keras):Resize and stretch
+
+
+## Classification Metrics
+
+1. Accuracy(準確率): accuracy is not a good choice with 'unbalanced' classes.
+2. Recall: ability of a model to find all the relevant cases within a dataset.(true positives/true positives+false negatives)
+3. Precision: ability of a classification model to identify only the relevant data points.(true positives/true positives+false positives)
+4. F1-Score: The F1-score is the harmonic mean of precision and recall taking both metrics
+F1 = 2*(precision*recall)/(precision+recall)....it can punishes extreme values
+
+
+
 
 
 
