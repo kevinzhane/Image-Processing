@@ -250,6 +250,37 @@ Data Cleaning(use Keras):Resize and stretch
 4. F1-Score: The F1-score is the harmonic mean of precision and recall taking both metrics
 F1 = 2*(precision*recall)/(precision+recall)....it can punishes extreme values
 
+## CNN (Convolutional Neural Networks)
+
+
+Overview: Input Image---->filter(different feature)---->
+
+Tensors: N-Dimensional arrays like [ [[1,2],[3,4]],[[5,6],[7,8]]  ]  
+Tensors in CNN: (I,H,W,C)	I:Images, H:Height of image in pixels, W:Weight of image in pixel, C:Color channels(1:grayscale,3:RGB)  
+
+
+Different between CNN & DNN: CNN is only connect the nearby units,so it can save time and more fast. Because the images are more large than before. So CNN can reduce the parameter than DNN. Major advantage in CNN is more convenient to perform image detection. Because the pixel nearby each other is more correlated.  
+
+### Convolution layer
+Use convolution filter to produce feature map (1 filters check 1 feature).  
+This step can reduce the original image size.  
+
+Ex. input(32,32)---> convolution filter(5*5) -----> feature map(28*28)
+
+### pooling layer
+
+Subsample:  
+Pooling layers will subsample(取樣) the input imag, it can reduce the 'memory use' and 'computer load'. (also reduce the number of parameters)
+
+subsample will make a kernel(ex. 2*2),and use this kernel to find max value is this kernel area. It's mean only the max value can arrive to next layer.  
+Notes: kernel 2 by 2 and strides of 2 will remove 75% of the input data.  
+
+input(32,32)---> convolution filter(5*5) -----> feature map(28*28) ---> pooling(2*2) ---> feature map(14*14)
+
+Dropout:  
+Dropout can be thought of as a form of regularization to help prevent overfitting.  
+During training,units are ramdomly dropped,along with their connection.  
+
 
 
 
