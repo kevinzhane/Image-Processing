@@ -282,7 +282,13 @@ Dropout can be thought of as a form of regularization to help prevent overfittin
 During training,units are ramdomly dropped,along with their connection.  
 
 
+### How to build the model in keras use python
 
+1. Load the data 
+2. Preprocession (one-hot decode,reshape data,scales...)
+3. Build the training model ( use keras.model and layer) ----> (Con2d---MaxPooling---Flatten---Dense---output)
+4. Training the model
+5. Evaluating the model (show the result of model)
 
 
 
