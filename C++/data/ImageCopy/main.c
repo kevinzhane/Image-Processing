@@ -15,7 +15,7 @@ int main()
 
     for(int i =0;i<54;i++)
     {
-        header[i] =getc(streamIn);
+        header[i] = getc(streamIn);
 
     }
 
